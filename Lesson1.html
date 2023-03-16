@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>training the form</title>
+    <style>
+        .aria-label{
+            color: red;
+        }
+        form{
+            margin: 0 auto;
+            width: 400px;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        form li + li{
+            padding-top: 1em;
+
+        }
+        label{
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+
+        }
+        input, textarea, select{
+            font: 1em sans-serif;
+            width: 300px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+        }
+        input:focus{
+            border: 1px solid #000;
+        }
+        textarea:focus{
+            border: 1px solid #000;
+        
+        }
+        select:focus{
+            border: 1px solid #000;
+        }
+        textarea{
+            vertical-align: top;
+            height: 5em;
+
+        }
+        select{
+            vertical-align: top;
+            margin-top: 0px;
+            margin-left: 5px;
+           
+        }
+        
+        button{
+            margin-left: 0.5em;
+            
+
+        }
+        .button{
+            padding-left: 90px;
+            padding-top: 5em;
+        }
+    
+     
+        
+
+    </style>
+</head>
+<body>
+    <form method="post" action="/my-handling-form-page">
+    <ul>
+        <li>
+            <lable for="name"><span aria-label="required">*</span>Name:</lable>
+            <input type="text" id="name" name="username"/>
+        </li>
+        <li>
+            <lable for="mail"><span aria-label="required">*</span>Email:</lable>
+            <input type="email" id="mail" name="user_email"/>
+        </li>
+        <li>
+            <label for="msg"><span aria-label="required">*</span>massage:</label>
+            <textarea id="msg" name="user_message"></textarea>
+        </li>
+        
+        <li>
+            <lable for="radio"><span aria-label="required">*</span>Gender:</lable>
+            <input type="radio" name="gender" value="male" style="width: 100px; padding: 0px; margin: 3px; border: none;" />Male
+            <input type="radio" name="gender" value="femal" style="width: 100px; padding: 0px; margin: 3px;" />Femal
+        </li>
+        <li>
+        <label for="card"><span aria-label="required">*</span>Card type:</label>
+          <select id="card" name="user_card">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+          </li>
+          
+        <li class="button">
+            <button type="submit">send data</button>
+        </li>
+    </ul>
+    </form>
+   
+
+</body>
+</html>
